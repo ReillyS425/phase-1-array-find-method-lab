@@ -1,7 +1,8 @@
 
-  function superbowlWin(record) {
-    const winningrecord = record.find(record => record.result === "W");
-    if (winningrecord) {
-        return winningrecord.year;
+function superbowlWin(record) {
+  for (const winningRecord of record) {
+    if (winningRecord.result === "W") {
+      return winningRecord.year;
     }
-  };
+  }
+}
